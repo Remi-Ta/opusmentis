@@ -1,0 +1,129 @@
+/* ========================================
+   OPUS MENTIS CRÉATIONS - Styles de base
+   ======================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Couleurs identitaires */
+    --color-opus: #ffe430;
+    --color-podcast: #efebd6;
+    --color-black: #0a0a0a;
+    --color-white: #fafafa;
+    
+    /* Typographies (on importera les custom fonts plus tard) */
+    --font-main: Arial, sans-serif;
+    --font-secondary: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--color-white);
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.main-nav {
+    background: var(--color-black);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-opus);
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-opus);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    background: var(--color-opus);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.hero-tagline {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+/* Sections */
+.intro {
+    padding: 6rem 2rem;
+    background: var(--color-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: lowercase;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* Footer */
+footer {
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 3rem 2rem;
+    text-transform: lowercase;
+}
