@@ -1,3 +1,40 @@
 backend:
   name: git-gateway
   branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: fr
+
+collections:
+  # Collection pour les pages principales
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  # Collection pour les épisodes du podcast
+  - name: "podcast"
+    label: "le beau rôle. (Podcast)"
+    folder: "src/podcast"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre de l'épisode", name: "title", widget: "string" }
+      - { label: "Numéro d'épisode", name: "episode", widget: "number", required: false }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Image de couverture", name: "image", widget: "image", required: false }
+      - { label: "Extrait", name: "excerpt", widget: "text", required: false }
+      - { label: "Lien Spotify", name: "spotify", widget: "string", required: false }
+      - { label: "Lien Deezer", name: "deezer", widget: "string", required: false }
+      - { label: "Lien Apple Podcasts", name: "apple", widget: "string", required: false }
+      - { label: "Description", name: "body", widget: "markdown" }
